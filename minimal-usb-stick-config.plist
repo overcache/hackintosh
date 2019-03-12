@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Boot</key>
+    <dict>
+        <key>Arguments</key>
+        <string>-v debug=0x100 keepsyms=1</string>
+    </dict>
+    <key>Devices</key>
+    <dict>
+        <key>USB</key>
+        <dict>
+            <key>FixOwnership</key>
+            <true/>
+        </dict>
+    </dict>
+    <key>Graphics</key>
+	<dict>
+		<key>Inject</key>
+		<false/>
+	</dict>
+    <key>KernelAndKextPatches</key>
+    <dict>
+        <key>KextsToPatch</key>
+        <array>
+            <dict>
+                <key>Comment</key>
+                <string>Port limit increase (Ricky)</string>
+                <key>Disabled</key>
+                <false/>
+                <key>Find</key>
+                <data>
+                g/sPD4OPBAAA
+                </data>
+                <key>InfoPlistPatch</key>
+                <false/>
+                <key>MatchOS</key>
+                <string>10.14.x</string>
+                <key>Name</key>
+                <string>com.apple.driver.usb.AppleUSBXHCI</string>
+                <key>Replace</key>
+                <data>
+                g/sPkJCQkJCQ
+                </data>
+            </dict>
+        </array>
+    </dict>
+    <key>SMBIOS</key>
+    <dict>
+        <key>ProductName</key>
+        <string>iMac18,1</string>
+    </dict>
+    <key>SystemParameters</key>
+    <dict>
+        <key>InjectKexts</key>
+        <string>Yes</string>
+        <key>InjectSystemID</key>
+        <true/>
+    </dict>
+</dict>
+</plist>
