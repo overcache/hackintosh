@@ -49,7 +49,7 @@ The installation base on [hackintosh-vanilla-desktop-guide](https://hackintosh.g
   - follow the vanilla tutorial
     ```bash
     # find usb device number
-    diskutils list
+    diskutil list
 
     # format usb device, replace # with your usb device number
     diskutil partitionDisk /dev/disk# GPT JHFS+ "USB" 100%
