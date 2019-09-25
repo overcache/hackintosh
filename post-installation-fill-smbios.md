@@ -1,9 +1,8 @@
 # Post installation: fill SMBIOS info
 
 - open `EFI/CLOVER/config.plist` with Clover Configurator
-- generate SMBIOS info with 'iMac18,1'. if you use eGPU, select 'iMac18,3' instead.
-  ![SMBIOS-0](./screenshots/smbios-0.jpg)
-  ![SMBIOS-1](./screenshots/smbios-1.jpg)
+- generate SMBIOS info with `iMac19,1`. if you use eGPU, select `iMac19,2` instead.
+  ![SMBIOS-0](./screenshots/smbios-0.png)
 - Actually, we need 4 values only, delete others if you want.
   ```xml
   <key>BoardSerialNumber</key>
