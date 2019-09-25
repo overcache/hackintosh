@@ -40,8 +40,8 @@ The installation base on [hackintosh-vanilla-desktop-guide](https://hackintosh.g
 ## Pre-Installation
 
 - BIOS setting
-  - "Load Optimized Defaults" then "Save and Exit"
-  - "iGPU" to "enabled"
+  - `Load Optimized Defaults` then `Save and Exit`
+  - `iGPU` to `enabled`
   - That's it, everything works fine. it doesn't matter what the values of those options are:
     - Windows 8/10 Features. It's OK with default value "Windows 8/10"
     - CSM Support. It's OK with default value "Enabled""
@@ -66,17 +66,17 @@ The installation base on [hackintosh-vanilla-desktop-guide](https://hackintosh.g
 
 - Install Clover to USB stick
   - install clover, click "Change Install Location" then choose your usb device.
-  - click 'Customize' button at left bottom
-    - check 'Clover for UEFI booting only'
-    - check 'Install Clover in the ESP'
-    - under 'UEFI drivers', check 'ApfsDriverLoader-64.efi', 'AptioMemoryFix-64.efi', 'HFSPlus.efi'
+  - click `Customize` button at left bottom
+    - check `Clover for UEFI booting only`
+    - check `Install Clover in the ESP`
+    - under `UEFI drivers`, check `ApfsDriverLoader-64.efi`, `AptioMemoryFix-64.efi`, `HFSPlus.efi`
     - uncheck others
 
 - Cleanup EFI folder
   - mount EFI folder with [Hackintool](http://headsoft.com.au/download/mac/Hackintool.zip)
-  - delete 'drivers64' folder under 'EFI/CLOVER', we don't need lagency drivers as we boot via UEFI only
-  - in 'EFI/CLOVER/drivers64UEFI', 3 drivers: 'ApfsDriverLoader-64.efi', 'AptioMemoryFix-64.efi', 'HFSPlus.efi' are enough, delete others. 'ApfsDriverLoader-64.efi' allow clover to read/write apfs partions, 'AptioMemoryFix-64.efi' for memory management, 'HFSPlus.efi' for reading/writing HFS partions and faster than 'VBoxHfs-64.efi' driver. Network, Audio and Video kexts are unnecessary at installation.
-  - copy [lilu.kext](https://github.com/acidanthera/Lilu/releases)(download the zip file which has 'RELEASE' in the filename) and [VirtualSMC.kext](https://github.com/acidanthera/VirtualSMC/releases)(download the zip file which has 'RELEASE' in the filename) to 'EFI/CLOVER/kexts/Other' folder. 'VirtualSMC.kext' supercedes FakeSMC.kext as our SMC emulator, it requires 'Lilu.kext' for full functioning. All 'EFI/CLOVER/kexts/10.x.x' folder should be empty or deleted. There is a guide about [lilu](https://www.tonymacx86.com/threads/an-idiots-guide-to-lilu-and-its-plug-ins.260063/)
+  - delete `drivers64` folder under `EFI/CLOVER`, we don't need lagency drivers as we boot via UEFI only
+  - in `EFI/CLOVER/drivers64UEFI`, 3 drivers: `ApfsDriverLoader-64.efi`, `AptioMemoryFix-64.efi`, `HFSPlus.efi` are enough, delete others. `ApfsDriverLoader-64.efi` allow clover to read/write apfs partions, `AptioMemoryFix-64.efi` for memory management, `HFSPlus.efi` for reading/writing HFS partions and faster than `VBoxHfs-64.efi` driver. Network, Audio and Video kexts are unnecessary at installation.
+  - copy [lilu.kext](https://github.com/acidanthera/Lilu/releases)(download the zip file which has `RELEASE` in the filename) and [VirtualSMC.kext](https://github.com/acidanthera/VirtualSMC/releases)(download the zip file which has `RELEASE` in the filename) to `EFI/CLOVER/kexts/Other` folder. `VirtualSMC.kext` supercedes FakeSMC.kext as our SMC emulator, it requires `Lilu.kext` for full functioning. All `EFI/CLOVER/kexts/10.x.x` folder should be empty or deleted. There is a guide about [lilu](https://www.tonymacx86.com/threads/an-idiots-guide-to-lilu-and-its-plug-ins.260063/)
   - the final usb stick's EFI folder: ![USB-EFI-folder](./screenshots/USB-EFI-folder.png)
 
 - Cleanup config.plist
@@ -87,7 +87,7 @@ The installation base on [hackintosh-vanilla-desktop-guide](https://hackintosh.g
 
 - Plug usb stick to your PC, and restart. Press F12 to choose boot media, select your usb stick to boot.
 - In Clover boot menu, choose your usb stick.
-- When installer boots, enter Disk Utility and format "Erase" your SSD. Choose the APFS and Guid Partition. Yes I choose 'APFS' not 'MacOS Extended (Journaled)', I stuck at installation when choose the later one.
+- When installer boots, enter Disk Utility and format "Erase" your SSD. Choose the APFS and Guid Partition. Yes I choose `APFS` not `MacOS Extended (Journaled)`, I stuck at installation when choose the later one.
 - Exit Disk Utility
 - Install Mojave
 
