@@ -27,5 +27,5 @@
 - copy patch output to config.plist
 - after reboot.
 
-  ![](./screenshots/fix-audio-video/after-patch-system-info.jpg)
-  ![](./screenshots/fix-audio-video/after-patch-hackintool-info.jpg)
+  ![](./screenshots/fix-audio-video/after-patch-system-info.png)
+  ![](./screenshots/fix-audio-video/after-patch-hackintool-info.png)

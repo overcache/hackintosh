@@ -61,7 +61,7 @@ The [minimal-usb-stick-config.plist](./minimal-usb-stick-config.plist) for insta
 
 - `RtVariables` Section. We place kexts in EFI folder, so we don't need to disabled sip. According to [Clover's wiki](https://clover-wiki.zetam.org/Configuration/RtVariables#CsrActiveConfig), SIP disabled default, we don't need any setting in RtVariables.
 
-- `SMBIOS` Section. choose iMac18,1 as ProductName, it doesn't matter whether you have dGPU or not.
+- `SMBIOS` Section. choose iMac19,1 as ProductName, it doesn't matter whether you have dGPU or not.
 ```xml
 <key>SMBIOS</key>
 <dict>
