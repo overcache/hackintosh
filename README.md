@@ -75,7 +75,11 @@ The installation base on [hackintosh-vanilla-desktop-guide](https://hackintosh.g
 - Cleanup EFI folder
   - mount EFI folder with [Hackintool](http://headsoft.com.au/download/mac/Hackintool.zip)
   - delete `drivers64` folder under `EFI/CLOVER`, we don't need lagency drivers as we boot via UEFI only
-  - in `EFI/CLOVER/drivers64UEFI`, 3 drivers: `ApfsDriverLoader-64.efi`, `AptioMemoryFix-64.efi`, `HFSPlus.efi` are enough, delete others. `ApfsDriverLoader-64.efi` allow clover to read/write apfs partions, `AptioMemoryFix-64.efi` for memory management, `HFSPlus.efi` for reading/writing HFS partions and faster than `VBoxHfs-64.efi` driver. Network, Audio and Video kexts are unnecessary at installation.
+  - in `EFI/CLOVER/drivers64UEFI`, 3 drivers: `ApfsDriverLoader-64.efi`, `AptioMemoryFix-64.efi`, `HFSPlus.efi` are enough, delete others.         
+    - `ApfsDriverLoader-64.efi` allow clover to read/write apfs partions
+    - `AptioMemoryFix-64.efi` for memory management
+    - `HFSPlus.efi` for reading/writing HFS partions and faster than `VBoxHfs-64.efi` driver.
+    - Network, Audio and Video kexts are unnecessary at installation.
   - copy [lilu.kext](https://github.com/acidanthera/Lilu/releases)(download the zip file which has `RELEASE` in the filename) and [VirtualSMC.kext](https://github.com/acidanthera/VirtualSMC/releases)(download the zip file which has `RELEASE` in the filename) to `EFI/CLOVER/kexts/Other` folder. `VirtualSMC.kext` supercedes FakeSMC.kext as our SMC emulator, it requires `Lilu.kext` for full functioning. All `EFI/CLOVER/kexts/10.x.x` folder should be empty or deleted. There is a guide about [lilu](https://www.tonymacx86.com/threads/an-idiots-guide-to-lilu-and-its-plug-ins.260063/)
   - the final usb stick's EFI folder: ![USB-EFI-folder](./screenshots/USB-EFI-folder.png)
 
